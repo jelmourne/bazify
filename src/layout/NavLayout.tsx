@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import NavButton from "../components/NavButton";
 import NavSearch from "../components/NavSearch";
-import SubNavLayout from "./SubNavLayout";
 
 function NavLayout() {
   return (
@@ -9,9 +8,8 @@ function NavLayout() {
       <nav className="p-3 bg-neutral-800">
         <ul className="flex justify-around">
           <li className="text-3xl w-full mx-3 text-white ">
-            <Link to={"/"} className="flex items-end font-bold ">
-              <img src="bazify-logo.svg" className="h-12 "></img>
-              azify
+            <Link to={"/"}>
+              <img src="bazify-logo.svg" className="h-12 active:scale-95"></img>
             </Link>
           </li>
           <li className=" w-full flex justify-center">
@@ -32,7 +30,6 @@ function NavLayout() {
           </li>
         </ul>
       </nav>
-      <SubNavLayout />
     </>
   );
 }
