@@ -1,13 +1,32 @@
+import { useSearchParams } from "react-router-dom";
 import NavLayout from "../layout/NavLayout";
+import TabLayout from "../layout/TabLayout";
 
 function SearchPage() {
-  const queryString = location.search;
-  const param = new URLSearchParams(queryString);
-  console.log(param.get("q"));
+  const [searchParams] = useSearchParams();
+
   return (
     <>
       <NavLayout />
-      <div>test: {location.href}</div>
+      <div className="flex items-center">
+        <TabLayout
+          tabs={[
+            "Discover",
+            "Shop",
+            "Categories",
+            "Products",
+            "Services",
+            "Software",
+          ]}
+        />
+        <div className="flex items-center bg-neutral-200">
+          <img src="./sort.svg"></img>
+          <select className="appearance-none text-black bg-neutral-200">
+            <option selected>Test</option>
+          </select>
+        </div>
+      </div>
+      <div>test: {searchParams.get("q")}</div>
     </>
   );
 }

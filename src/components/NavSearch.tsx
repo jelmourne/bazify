@@ -22,10 +22,14 @@ function NavSearch() {
         placeholder="Search"
       ></input>
       <Link to={{ pathname: "/search", search: "?q=" + search }}>
-        <img
-          className="absolute right-3 w-5 h-full aspect-square active:scale-95"
-          src="./search.svg"
-        ></img>
+        <div className="absolute right-6 h-full flex items-center">
+          <div className="bg-black rounded-full h-4/5 aspect-square  active:scale-95 flex justify-center items-center">
+            <img
+              className=" w-5 h-full aspect-square fiter invert-[95%]"
+              src="./search.svg"
+            ></img>
+          </div>
+        </div>
       </Link>
     </form>
   );
