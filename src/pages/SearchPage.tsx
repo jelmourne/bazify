@@ -1,6 +1,8 @@
 import { useSearchParams } from "react-router-dom";
 import NavLayout from "../layout/NavLayout";
 import TabLayout from "../layout/TabLayout";
+import SortLayout from "../layout/SortLayout";
+import FilterLayout from "../layout/FilterLayout";
 
 function SearchPage() {
   const [searchParams] = useSearchParams();
@@ -19,12 +21,8 @@ function SearchPage() {
             "Software",
           ]}
         />
-        <div className="flex items-center bg-neutral-200">
-          <img src="./sort.svg"></img>
-          <select className="appearance-none text-black bg-neutral-200">
-            <option selected>Test</option>
-          </select>
-        </div>
+        <SortLayout />
+        <FilterLayout />
       </div>
       <div>test: {searchParams.get("q")}</div>
     </>
