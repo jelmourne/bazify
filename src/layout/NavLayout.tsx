@@ -9,7 +9,10 @@ function NavLayout() {
         <ul className="flex justify-around">
           <li className="text-3xl w-full mx-3 text-white ">
             <Link to={"/"}>
-              <img src="bazify-logo.svg" className="h-12 active:scale-95"></img>
+              <img
+                src="../bazify-logo.svg"
+                className="h-12 active:scale-95"
+              ></img>
             </Link>
           </li>
           <li className=" w-full flex justify-center">
@@ -18,10 +21,10 @@ function NavLayout() {
           <li className="w-full flex justify-end">
             <ul className="flex items-center">
               <li className="mx-3">
-                <NavButton image="profile" url="/profile" />
+                <NavButton image="profile" url="/profiles" />
               </li>
               <li className="mx-3">
-                <NavButton image="order" url="/order" />
+                <NavButton image="order" url="/orders" />
               </li>
               <li className="mx-3">
                 <NavButton image="bag" url="/cart" />

@@ -1,4 +1,5 @@
 import CarouselLayout from "../layout/CarouselLayout";
+import FooterLayout from "../layout/FooterLayout";
 import NavLayout from "../layout/NavLayout";
 import ProductLayout from "../layout/ProductLayout";
 import SubNavLayout from "../layout/SubNavLayout";
@@ -16,27 +17,32 @@ function HomePage() {
       <NavLayout />
       <SubNavLayout />
       <CarouselLayout images={image} />
-      <TabLayout
-        tabs={[
-          "Recommended",
-          "Near You",
-          "Categories",
-          "Discover",
-          "Software",
-          "Services",
-          "Products",
-        ]}
-      />
+      <div className="bg-gray-100 p-1">
+        <TabLayout
+          tabs={[
+            "Recommended",
+            "Near You",
+            "Categories",
+            "Discover",
+            "Software",
+            "Services",
+            "Products",
+          ]}
+        />
+      </div>
       <div className="flex justify-center bg-gray-100">
         <ProductLayout
           image="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630"
           rating={4.5}
+          id="123"
         />
         <ProductLayout
+          id="342423fdsfsd"
           image="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630"
           rating={4.5}
         />
       </div>
+      <FooterLayout />
     </>
   );
 }

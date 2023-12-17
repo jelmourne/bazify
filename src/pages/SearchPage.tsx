@@ -10,7 +10,7 @@ function SearchPage() {
   return (
     <>
       <NavLayout />
-      <div className="flex items-center">
+      <div className="flex items-center justify-between bg-gray-100">
         <TabLayout
           tabs={[
             "Discover",
@@ -21,10 +21,12 @@ function SearchPage() {
             "Software",
           ]}
         />
-        <SortLayout />
-        <FilterLayout />
+        <div className="flex m-2">
+          <SortLayout />
+          <FilterLayout />
+        </div>
       </div>
-      <div>test: {searchParams.get("q")}</div>
+      <div className="bg-gray-100">test: {searchParams.get("q")}</div>
     </>
   );
 }

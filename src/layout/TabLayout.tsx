@@ -17,7 +17,7 @@ function TabLayout(props: { tabs: Array<string> }) {
   }, [activeTabIndex]);
 
   return (
-    <div className="flew-row relative m-2 mx-2 flex h-12 rounded-3xl bg-neutral-200 px-2 backdrop-blur-sm">
+    <div className="flew-row relative m-2 flex h-12 bg-white rounded-3xl px-2 backdrop-blur-sm">
       <span
         className="absolute bottom-0 top-0 -z-10 flex overflow-hidden rounded-3xl py-2 transition-all duration-[400ms]"
         style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
