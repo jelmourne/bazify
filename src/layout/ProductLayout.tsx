@@ -1,5 +1,6 @@
-import ProductStars from "../temp/ProductStars";
-import ProductVerified from "../temp/ProductVerified";
+import ProductStars from "../components/ProductStars";
+import ProductVerified from "../components/ProductVerified";
+import { Link } from "react-router-dom";
 
 function ProductLayout(props: { image: string; rating: number; id: string }) {
   return (

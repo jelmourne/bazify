@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import NavButton from "../temp/NavButton";
-import NavSearch from "../temp/NavSearch";
+import NavButton from "../components/NavButton";
+import NavSearch from "../components/NavSearch";
 
 function NavLayout() {
   return (
