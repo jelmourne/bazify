@@ -26,7 +26,7 @@ function NavSearch() {
           <div className="bg-black rounded-full h-4/5 aspect-square  active:scale-95 flex justify-center items-center">
             <img
               className=" w-5 h-full aspect-square fiter invert-[95%]"
-              src="./search.svg"
+              src="../search.svg"
             ></img>
           </div>
         </div>

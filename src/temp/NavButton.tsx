@@ -7,7 +7,7 @@ function NavButton(props: { image: string; url: string }) {
       <Link to={props.url}>
         <img
           className="fiter invert-[95%] active:scale-95"
-          src={"./" + props.image + ".svg"}
+          src={"../" + props.image + ".svg"}
           alt={props.image}
           title={capitalizeFirstLetter(props.image)}
         ></img>

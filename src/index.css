@@ -7,5 +7,6 @@
   html {
     font-family: poppins;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 }
