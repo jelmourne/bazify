@@ -8,7 +8,7 @@ function NavSearch() {
 
   return (
     <form
-      className="w-full flex relative"
+      className="flex relative w-full"
       onSubmit={(e: FormEvent) => {
         navigate(handleSearchSubmit(e, search));
       }}
@@ -18,7 +18,7 @@ function NavSearch() {
           setSearch(e.target.value);
         }}
         type="search"
-        className="w-full rounded-full focus:outline-none focus:ring focus:border-blue-500 [&::placeholder]:text-center [&::-webkit-search-cancel-button]:appearance-none pl-3 flex items-center"
+        className="w-full py-2 rounded-full focus:outline-none focus:ring focus:border-blue-500 [&::placeholder]:text-center [&::-webkit-search-cancel-button]:appearance-none pl-3 flex items-center"
         placeholder="Search"
       ></input>
       <Link to={{ pathname: "/search", search: "?q=" + search }}>

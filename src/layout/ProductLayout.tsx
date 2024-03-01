@@ -1,5 +1,5 @@
-import ProductStars from "../components/ProductStars";
-import ProductVerified from "../components/ProductVerified";
+import ProductStars from "../temp/ProductStars";
+import ProductVerified from "../temp/ProductVerified";
 
 function ProductLayout(props: { image: string; rating: number }) {
   return (
