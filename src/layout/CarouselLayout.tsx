@@ -36,8 +36,10 @@ function CarouselLayout() {
             ></img>
           </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <div className="lg:block hidden">
+          <CarouselPrevious />
+          <CarouselNext />
+        </div>
       </Carousel>
     </div>
   );
