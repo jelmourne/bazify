@@ -13,8 +13,11 @@ function SubNavLayout() {
   return (
     <nav className="bg-secondary flex justify-between px-5">
       <ul className="flex justify-start gap-7 items-center">
-        <li>adsadsa</li>
-        <li>Contact</li>
+        <li>Categories</li>
+        <li>Deals</li>
+        <li>New Products</li>
+        <li>Your Area</li>
+        <li>Buisness</li>
       </ul>
       <div className="flex gap-5">
         <DropdownMenu>
