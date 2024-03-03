@@ -20,7 +20,7 @@ function CarouselLayout() {
             delay: 5000,
           }),
         ]}
-        className="w-full max-w-[100rem]"
+        className="w-full max-w-[70rem]"
       >
         <CarouselContent>
           <CarouselItem>

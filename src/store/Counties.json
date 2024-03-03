@@ -83,5 +83,42 @@
     ["DA", "Danish"],
     ["NO", "Norwegian"],
     ["PL", "Polish"]
+  ],
+  "categories": [
+    {
+      "title": "Electronics",
+      "image": "electronic",
+      "desc": "Shop for the newest tech"
+    },
+    {
+      "title": "Books & Media",
+      "image": "media",
+      "desc": "Expand your horizons"
+    },
+    {
+      "title": "Health & Beauty",
+      "image": "beauty",
+      "desc": "Treat your body & mind"
+    },
+    {
+      "title": "Fashion",
+      "image": "fashion",
+      "desc": "Stay up to date with the newest styles"
+    },
+    {
+      "title": "Home & Office",
+      "image": "home",
+      "desc": "Upgrade your home with luxury"
+    },
+    {
+      "title": "Sports & Outdoors",
+      "image": "sport",
+      "desc": "keep yourself active"
+    },
+    {
+      "title": "Toys & Games",
+      "image": "toy",
+      "desc": "Pass your time with some enjoyment"
+    }
   ]
 }

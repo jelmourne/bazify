@@ -4,7 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import data from "./store/Counties.json";
+import data from "../store/Counties.json";
 import { useState } from "react";
 
 function SubNavLayout() {
