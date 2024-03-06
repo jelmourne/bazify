@@ -119,6 +119,21 @@
       "title": "Toys & Games",
       "image": "toy",
       "desc": "Pass your time with some enjoyment"
+    },
+    {
+      "title": "Automotive",
+      "image": "vehicle",
+      "desc": "Drive in style with our Automotive collection"
+    },
+    {
+      "title": "Pet Supplies",
+      "image": "pet",
+      "desc": "Spoil your furry friend with our products"
+    },
+    {
+      "title": "Arts & Crafts",
+      "image": "brush",
+      "desc": "Ignite your creativity"
     }
   ]
 }

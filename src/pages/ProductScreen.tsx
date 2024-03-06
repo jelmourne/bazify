@@ -1,12 +1,11 @@
 import NavLayout from "../layout/NavLayout";
 
-function ProductPage() {
+function ProductScreen() {
   return (
     <>
       <NavLayout />
-      dassda
     </>
   );
 }
 
-export default ProductPage;
+export default ProductScreen;

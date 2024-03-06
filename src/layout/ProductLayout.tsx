@@ -1,22 +1,26 @@
-import ProductStars from "../components/ProductStars";
-import ProductVerified from "../components/ProductVerified";
-import { Link } from "react-router-dom";
+import ProductCard from "@/components/ProductCard";
 
-function ProductLayout(props: { image: string; rating: number; id: string }) {
+interface ProductLayoutProps {
+  title: string;
+}
+
+function ProductLayout({ title }: ProductLayoutProps) {
   return (
-    <Link to={"/products/" + props.id}>
-      <div className="flex flex-col w-80 justify-center p-2 m-3 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-md">
-        <ProductVerified src={props.image} />
-        <p className="text-center">Product Name</p>
-        <div className="flex justify-between">
-          <div className="flex flex-col">
-            <ProductStars rating={props.rating} />
-            <p>2000</p>
-          </div>
-          <p>$19.99</p>
-        </div>
+    <div className="flex flex-col items-between">
+      <h1 className="font-bold text-2xl my-5">{title}</h1>
+      <div className="flex gap-6 w-full">
+        <ProductCard
+          title={"Chair"}
+          rating={4}
+          count={23}
+          price={"19.99"}
+          img={
+            "https://assets.weimgs.com/weimgs/ab/images/wcm/products/202337/0021/open-box-mid-century-upholstered-dining-chair-wood-legs-o.jpg"
+          }
+          id={"1"}
+        />
       </div>
-    </Link>
+    </div>
   );
 }
 

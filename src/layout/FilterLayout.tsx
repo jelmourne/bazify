@@ -1,34 +1,20 @@
-import { useState } from "react";
-import FilterModal from "../components/FilterModal";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 function FilterLayout() {
-  const [open, setOpen] = useState<boolean>(false);
   return (
-    <div className="relative">
-      <div
-        className="bg-black rounded-full aspect-square p-6 flex items-center justify-center"
-        onClick={() => {
-          setOpen(!open);
-        }}
-      >
-        <img
-          className="fiter invert-[95%] absolute aspect-square w-5"
-          src="./filter.svg"
-        ></img>
-      </div>
-      {open && (
-        <div className="aspect-square fixed w-full h-full left-0 top-0 flex flex-col justify-center items-center backdrop-blur-sm backdrop-brightness-50">
-          <button
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            <img className="filter invert-[95%]" src="./close.svg"></img>
-          </button>
-          <FilterModal />
-        </div>
-      )}
-    </div>
+    <Accordion type="single" className="w-96 m-10" collapsible>
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   );
 }
 

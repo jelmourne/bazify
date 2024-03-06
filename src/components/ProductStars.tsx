@@ -5,10 +5,7 @@ function ProductStars(props: { rating: number }) {
   const [percentageRating] = useState(transformPercentage(props.rating));
   return (
     <>
-      <div
-        style={{ width: percentageRating + "%" }}
-        className="bg-clip-text bg-black text-transparent text-xl flex select-none"
-      >
+      <div className="bg-clip-text text-yellow-400 bg-neutral-500 text-xl flex select-none ">
         <p>&#11088;</p>
         <p>&#11088;</p>
         <p>&#11088;</p>
