@@ -3,13 +3,11 @@ import { UserResponse } from "@supabase/supabase-js";
 import supabase from "../auth";
 
 interface sessionState {
-  user: UserResponse;
-  session: any;
+  user: UserResponse | null;
 }
 
 const initialState: sessionState = {
-  user: (await supabase.auth.getUser()) || null,
-  session: (await supabase.auth.getSession()) || null,
+  user: null,
 };
 
 const sessionSlice = createSlice({
@@ -17,13 +15,15 @@ const sessionSlice = createSlice({
   initialState,
   reducers: {
     set: (state, action) => {
-      const { user, session } = action.payload;
+      const { user } = action.payload;
       state.user = user;
-      state.session = session;
+    },
+    clear: (state) => {
+      state.user = null;
     },
   },
 });
 
-export const { set } = sessionSlice.actions;
+export const { set, clear } = sessionSlice.actions;
 
 export default sessionSlice.reducer;

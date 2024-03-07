@@ -15,7 +15,7 @@ interface NavButtonProps {
   name?: string;
   link?: string;
   img: string;
-  user?: UserResponse;
+  user?: string;
 }
 
 function NavButton({ name, link, img, user }: NavButtonProps) {
@@ -39,7 +39,7 @@ function NavButton({ name, link, img, user }: NavButtonProps) {
       ) : (
         <DropdownMenu>
           <DropdownMenuTrigger className="select-none flex justify-center text-white text-md gap-2 active:scale-95 transition-all items-center bg-neutral-900 p-2 outline-none h-11 rounded-lg hover:bg-neutral-700">
-            {user.user.identities[0].identity_data.name.split(" ")[0]}
+            {user}
             <img
               className="fiter invert-[95%]"
               width={25}

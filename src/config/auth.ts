@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { store } from "./store";
 
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -7,10 +8,10 @@ const supabase = createClient(
 
 supabase.auth.onAuthStateChange((event, session) => {
   if (event == "SIGNED_IN") {
-    console.log(session);
-    location.reload();
+    store.dispatch({ type: "session/set", payload: session?.user });
   } else if (event == "SIGNED_OUT") {
-    console.log("signed out");
+    store.dispatch({ type: "session/clear" });
+    location.reload();
   }
 });
 

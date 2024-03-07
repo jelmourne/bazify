@@ -29,10 +29,9 @@ function CarouselLayout({ img }: CarouselLayoutProps) {
         <CarouselContent>
           {img.map((e, i) => {
             return (
-              <CarouselItem>
+              <CarouselItem key={i}>
                 <img
                   className="w-full object-cover aspect-[6/3] rounded-xl"
-                  key={i}
                   src={e}
                 ></img>
               </CarouselItem>

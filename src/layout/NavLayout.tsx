@@ -11,7 +11,6 @@ import { RootState } from "@/config/store";
 
 function NavLayout() {
   const user = useSelector((state: RootState) => state.session.user);
-  console.log(user);
   return (
     <>
       <nav className="p-3 bg-neutral-800">

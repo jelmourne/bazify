@@ -8,6 +8,9 @@ import OrderScreen from "./pages/OrderScreen";
 import CartScreen from "./pages/CartScreen";
 import { Provider } from "react-redux";
 import { store } from "./config/store";
+import DashboardScreen from "./pages/DashboardScreen";
+import ShopScreen from "./pages/ShopScreen";
+import CreateScreen from "./pages/CreateScreen";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
@@ -18,6 +21,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/product/:id" element={<ProductScreen />} />
         <Route path="/orders" element={<OrderScreen />} />
         <Route path="/cart" element={<CartScreen />} />
+        <Route path="/shop" element={<DashboardScreen />}>
+          <Route path="/shop/:id" element={<ShopScreen />} />
+          <Route path="/shop/create" element={<CreateScreen />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </Provider>
