@@ -8,20 +8,20 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { UserResponse } from "@supabase/supabase-js";
+import { User } from "@supabase/supabase-js";
 import supabase from "@/config/auth";
 
 interface NavButtonProps {
   name?: string;
   link?: string;
   img: string;
-  user?: string;
+  user?: User;
 }
 
 function NavButton({ name, link, img, user }: NavButtonProps) {
   return (
     <>
-      {link != undefined ? (
+      {link ? (
         <Link
           to={link}
           className="select-none flex justify-center text-white text-md gap-2 active:scale-95 h-11 transition-all items-center bg-neutral-900 p-2 rounded-lg hover:bg-neutral-700 min-w-[2.75rem]"
@@ -39,7 +39,7 @@ function NavButton({ name, link, img, user }: NavButtonProps) {
       ) : (
         <DropdownMenu>
           <DropdownMenuTrigger className="select-none flex justify-center text-white text-md gap-2 active:scale-95 transition-all items-center bg-neutral-900 p-2 outline-none h-11 rounded-lg hover:bg-neutral-700">
-            {user}
+            {user?.identities[0].identity_data.name.split(" ")[0]}
             <img
               className="fiter invert-[95%]"
               width={25}

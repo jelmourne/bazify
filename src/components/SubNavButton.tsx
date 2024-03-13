@@ -1,7 +1,6 @@
 import {
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { ReactNode } from "react";
@@ -18,15 +17,13 @@ function SubNavButton({ title, link, children }: SubNavButtonProps) {
     <>
       {link ? (
         <NavigationMenuItem>
-          <Link to={`${link}`}>
-            <NavigationMenuLink className="hover:bg-white/20 p-3 rounded-lg">
-              {title}
-            </NavigationMenuLink>
+          <Link to={`${link}`} className="hover:bg-white/20 p-2 rounded-lg">
+            {title}
           </Link>
         </NavigationMenuItem>
       ) : (
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent p-3 hover:bg-white/20">
+          <NavigationMenuTrigger className="bg-transparent p-2 hover:bg-white/20">
             {title}
           </NavigationMenuTrigger>
           <NavigationMenuContent>{children}</NavigationMenuContent>

@@ -1,5 +1,13 @@
+import ShopForm from "@/components/forms/ShopForm";
+import NavLayout from "@/layout/NavLayout";
+
 function CreateScreen() {
-  return <div>fsfds</div>;
+  return (
+    <>
+      <NavLayout />
+      <ShopForm />
+    </>
+  );
 }
 
 export default CreateScreen;

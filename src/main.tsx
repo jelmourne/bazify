@@ -11,6 +11,7 @@ import { store } from "./config/store";
 import DashboardScreen from "./pages/DashboardScreen";
 import ShopScreen from "./pages/ShopScreen";
 import CreateScreen from "./pages/CreateScreen";
+import ExploreScreen from "./pages/ExploreScreen";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
@@ -18,13 +19,13 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
-        <Route path="/product/:id" element={<ProductScreen />} />
+        <Route path="/products" element={<ExploreScreen />} />
+        <Route path="/products/{id}" element={<ProductScreen />} />
         <Route path="/orders" element={<OrderScreen />} />
-        <Route path="/cart" element={<CartScreen />} />
-        <Route path="/shop" element={<DashboardScreen />}>
-          <Route path="/shop/:id" element={<ShopScreen />} />
-          <Route path="/shop/create" element={<CreateScreen />} />
-        </Route>
+        <Route path="cart" element={<CartScreen />} />
+        <Route path="/shop" element={<DashboardScreen />} />
+        <Route path="/shop/:id" element={<ShopScreen />} />
+        <Route path="/shop/create" element={<CreateScreen />} />
       </Routes>
     </BrowserRouter>
   </Provider>

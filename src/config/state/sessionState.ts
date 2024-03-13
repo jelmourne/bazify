@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { UserResponse } from "@supabase/supabase-js";
-import supabase from "../auth";
+import { User } from "@supabase/supabase-js";
 
 interface sessionState {
-  user: UserResponse | null;
+  user: User | null;
 }
 
 const initialState: sessionState = {
@@ -15,7 +14,7 @@ const sessionSlice = createSlice({
   initialState,
   reducers: {
     set: (state, action) => {
-      const { user } = action.payload;
+      const user = action.payload;
       state.user = user;
     },
     clear: (state) => {

@@ -20,7 +20,7 @@ function SubNavLayout() {
   return (
     <nav className="bg-secondary flex justify-between px-5">
       <NavigationMenu>
-        <NavigationMenuList className="flex gap-6">
+        <NavigationMenuList className="flex gap-6 items-center">
           <SubNavButton title="Categories">
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               {data.categories.map((e, i) => {
@@ -54,9 +54,9 @@ function SubNavLayout() {
               <SubNavButton title="Pricing" link="/shop/pricing" />
             </ul>
           </SubNavButton>
-          <SubNavButton title="Deals" link="/deals" />
-          <SubNavButton title="New Products" link="/new" />
-          <SubNavButton title="Your Area" link="/local" />
+          <SubNavButton title="Deals" link="/products?tab=deals" />
+          <SubNavButton title="New Products" link="/products?tab=new" />
+          <SubNavButton title="Your Area" link="/products?tab=local" />
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex gap-5">
