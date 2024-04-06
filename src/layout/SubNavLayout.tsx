@@ -4,6 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import data from "../config/Counties.json";
 import { useState } from "react";
 import {
@@ -13,6 +14,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import SubNavButton from "@/components/SubNavButton";
 import { Link } from "react-router-dom";
+import { NavigationMenuItem } from "@radix-ui/react-navigation-menu";
 
 function SubNavLayout() {
   const [country, setCountry] = useState("CA");
@@ -22,12 +24,16 @@ function SubNavLayout() {
       <NavigationMenu>
         <NavigationMenuList className="flex gap-6 items-center">
           <SubNavButton title="Categories">
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               {data.categories.map((e, i) => {
                 return (
-                  <li className="row-span-3" key={i}>
-                    <NavigationMenuLink>{e.title}</NavigationMenuLink>
-                  </li>
+                  <NavigationMenuItem key={i}>
+                    <Link to={"/products?category=" + e.title}>
+                      <NavigationMenuLink className="inline-flex h-10 w-full items-center justify-start rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                        {e.title}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
                 );
               })}
             </ul>

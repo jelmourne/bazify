@@ -12,6 +12,7 @@ import DashboardScreen from "./pages/DashboardScreen";
 import ShopScreen from "./pages/ShopScreen";
 import CreateScreen from "./pages/CreateScreen";
 import ExploreScreen from "./pages/ExploreScreen";
+import FooterLayout from "./layout/FooterLayout";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
@@ -28,5 +29,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/shop/create" element={<CreateScreen />} />
       </Routes>
     </BrowserRouter>
+    <FooterLayout />
   </Provider>
 );

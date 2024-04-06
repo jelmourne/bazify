@@ -1,4 +1,3 @@
-import FooterLayout from "@/layout/FooterLayout";
 import NavLayout from "../layout/NavLayout";
 import SubNavLayout from "../layout/SubNavLayout";
 import CarouselLayout from "@/layout/CarouselLayout";
@@ -17,7 +16,6 @@ function HomePage() {
       <CarouselLayout img={images} />
       <CategoryLayout />
       <ProductLayout title="Recommended" />
-      <FooterLayout />
     </>
   );
 }

@@ -25,7 +25,11 @@ function AuthButton({ provider }: AuthButtonProps) {
         signInWithProvider(provider.toLowerCase());
       }}
     >
-      <img width={20} height={20} src={`./${provider.toLowerCase()}.svg`}></img>
+      <img
+        width={20}
+        height={20}
+        src={`../${provider.toLowerCase()}.svg`}
+      ></img>
       {provider}
     </Button>
   );

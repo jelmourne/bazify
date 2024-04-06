@@ -1,0 +1,87 @@
+{
+  "database": {
+    "1711544678095": {
+      "host": "51.161.68.193",
+      "port": 433,
+      "user": "user_avispneus",
+      "password": "H3aH8N69aPNZmuP9s4m*BdCmjL#mHmat",
+      "dbType": "SqlServer",
+      "database": "AVISPNEUS",
+      "advance": {
+        "hideSystemSchema": true,
+        "safeUpdateMode": false,
+        "groupingTables": false,
+        "showForeignKey": false
+      },
+      "timezone": "+00:00",
+      "usingSSH": false,
+      "useSocksProxy": false,
+      "useHTTPProxy": false,
+      "global": true,
+      "savePassword": "Forever",
+      "readonly": false,
+      "sort": 11,
+      "useSSL": false,
+      "fs": {
+        "showHidden": true
+      },
+      "sqlServer": {
+        "encrypt": true,
+        "authType": "default"
+      },
+      "key": "1711544678095",
+      "connectionKey": "database.connections"
+    }
+  },
+  "nosql": {
+    "1702313095221": {
+      "host": "127.0.0.1",
+      "port": 27017,
+      "dbType": "MongoDB",
+      "timezone": "+00:00",
+      "useConnectionString": false,
+      "usingSSH": false,
+      "useSocksProxy": false,
+      "global": true,
+      "savePassword": "Forever",
+      "hideSystemSchema": true,
+      "readonly": false,
+      "sort": 11,
+      "useSSL": false,
+      "encrypt": true,
+      "authType": "default",
+      "esAuth": "none",
+      "showHidden": true,
+      "srv": false,
+      "key": "1702313095221",
+      "connectionKey": "nosql.connections",
+      "advance": {
+        "hideSystemSchema": true
+      }
+    },
+    "1704038413851": {
+      "host": "127.0.0.1",
+      "port": 27017,
+      "dbType": "MongoDB",
+      "advance": {
+        "hideSystemSchema": true
+      },
+      "timezone": "+00:00",
+      "useConnectionString": true,
+      "connectionUrl": "mongodb+srv://Justin:Bruce-12@cluster0.1tketnu.mongodb.net/",
+      "usingSSH": false,
+      "useSocksProxy": false,
+      "global": true,
+      "savePassword": "Forever",
+      "readonly": false,
+      "sort": 12,
+      "useSSL": false,
+      "fs": {
+        "showHidden": true
+      },
+      "key": "1704038413851",
+      "connectionKey": "nosql.connections"
+    }
+  },
+  "$schema": "http://127.0.0.1:8828/schema.json"
+}

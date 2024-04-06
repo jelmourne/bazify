@@ -35,7 +35,7 @@ function NavLayout() {
                   Login
                   <img
                     className="fiter invert-[95%] active:scale-95"
-                    src="./profile.svg"
+                    src="../profile.svg"
                   ></img>
                 </DialogTrigger>
                 <DialogContent>

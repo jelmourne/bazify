@@ -28,10 +28,9 @@ function ShippingForm<T extends FieldValues>({ form }: ShippingFormProps<T>) {
         control={form.control}
         name="address"
         render={({ field }) => (
-          <FormItem>
-            <FormLabel>Address</FormLabel>
+          <FormItem className="my-5">
             <FormControl>
-              <Input placeholder="Address" type="text" {...field} />
+              <Input placeholder="Delivery Address" type="text" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -42,9 +41,8 @@ function ShippingForm<T extends FieldValues>({ form }: ShippingFormProps<T>) {
         name="address2"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Address2</FormLabel>
             <FormControl>
-              <Input placeholder="Address2" type="text" {...field} />
+              <Input placeholder="Delivery Address 2" type="text" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>

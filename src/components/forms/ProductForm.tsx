@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import axios from "../../config/api";
+import axios from "axios";
 import {
   Form,
   FormControl,
@@ -35,7 +35,7 @@ const formSchema = z.object({
   contact_hidden: z.boolean().optional(),
 });
 
-function ShopForm() {
+function ProductForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -49,7 +49,7 @@ function ShopForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    await axios.post("/api/shop/", { values });
+    await axios.post("/shop", { values });
   }
   return (
     <Form {...form}>
@@ -101,7 +101,7 @@ function ShopForm() {
           name="location_hidden"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Hide Location</FormLabel>
+              <FormLabel>About</FormLabel>
               <FormControl>
                 <Checkbox {...field} />
               </FormControl>
@@ -127,7 +127,7 @@ function ShopForm() {
           name="contact_hidden"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Hide Contact Info</FormLabel>
+              <FormLabel>About</FormLabel>
               <FormControl>
                 <Checkbox {...field} />
               </FormControl>
@@ -141,4 +141,4 @@ function ShopForm() {
   );
 }
 
-export default ShopForm;
+export default ProductForm;
