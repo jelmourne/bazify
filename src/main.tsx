@@ -30,5 +30,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       </Routes>
     </BrowserRouter>
     <FooterLayout />
-  </Provider>
+  </Provider>,
 );

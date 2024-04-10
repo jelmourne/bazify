@@ -1,4 +1,5 @@
 import ProductCard from "@/components/ProductCard";
+import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 
 interface ProductLayoutProps {
   title: string;
@@ -7,7 +8,9 @@ interface ProductLayoutProps {
 function ProductLayout({ title }: ProductLayoutProps) {
   return (
     <div className="flex flex-col items-between">
-      <h1 className="font-bold text-2xl my-5">{title}</h1>
+      <h1 className="font-bold text-2xl my-5">
+        {capitalizeFirstLetter(title)}
+      </h1>
       <div className="flex gap-6 w-full">
         <ProductCard
           title={"Chair"}

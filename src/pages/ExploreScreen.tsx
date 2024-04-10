@@ -1,3 +1,4 @@
+import FilterLayout from "@/layout/FilterLayout";
 import NavLayout from "@/layout/NavLayout";
 import ProductLayout from "@/layout/ProductLayout";
 import { useSearchParams } from "react-router-dom";
@@ -14,14 +15,18 @@ function ExploreScreen() {
   return (
     <>
       <NavLayout />
-      {searchParams.get("category") ? "dss" : "tet"}
-      <ProductLayout
-        title={
-          searchParams.get("category")
-            ? searchParams.get("category") || ""
-            : searchParams.get("tab") || ""
-        }
-      />
+      <div className="flex">
+        <FilterLayout
+          showCategories={searchParams.get("category") ? false : true}
+        />
+        <ProductLayout
+          title={
+            searchParams.get("category")
+              ? searchParams.get("category") || ""
+              : searchParams.get("tab") || ""
+          }
+        />
+      </div>
     </>
   );
 }
